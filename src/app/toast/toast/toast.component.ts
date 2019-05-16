@@ -11,6 +11,7 @@ export class ToastComponent implements OnInit {
   @Input() dismissible = false;
   alerts: Array<any> = [];
 
+  aboutText = 'Created by Agratsant Saxena (C) 2019';
   constructor(private toastService: ToastService) { }
 
   ngOnInit() {
@@ -18,6 +19,8 @@ export class ToastComponent implements OnInit {
       this.alerts.push(alerts);
     });
   }
+
+
 
   onClosed(e) {
   }
